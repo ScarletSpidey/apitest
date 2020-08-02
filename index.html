@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script>
+      axios
+        .get(
+          'https://api-sandbox.onemoney.in/aa/Consent/handle/389f85c7-a587-4eb6-904c-76a5a7c1208d',
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              client_api_key:
+                'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZpbnByb2JhbmsiLCJ0eXBlIjoiRklVIiwiaWF0IjoxNTg2ODQ2NzMxLCJleHAiOjE2NDk5MTg3MzF9.A-VX3lgu6T_r2FWIp2bsDAQK9vll6p4uQC_D5LwXmdo',
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => console.log(error));
+    </script>
+  </head>
+  <body></body>
+</html>
